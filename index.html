@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Programación de Interfaces SIG</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./libs/Ol/ol.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                <img src="./media/tm.png" alt="TransMilenio Logo">
+            </div>
+    <!------------------------------------ NAV ----------------------------------->
+            <nav>
+               <h1>Direcciones Portales Transmilenio</h1>
+            </nav>
+        </div>
+    </header>
+    <div class="grid-container">
+        <div class="grid-1">
+            <div class="sidebar">
+                <h2>Mapas de base</h2>
+                <input type="radio" name="baseLayerRadioButton" value="OSMStandard" checked>OSM Standard <br>
+                <input type="radio" name="baseLayerRadioButton" value="OSMHumanitarian">OSM Humanitarian <br>
+            </div>
+            <p class="texto">Dale click a cualquier punto en el mapa y conoce de que portal de transmilenio se trata y su dirección. <br> <br>Puedes cambiar el mapa de base con las herramientas de arriba y también puedes orientar el mapa dando click a la flecha ubicada en la parte superior derecha del Geovisor. <br> <br>Puedes acercar y alejar dando scroll.</p>
+        </div>
+
+        <div class="grid-2">
+            <div id="js-map" class="map"></div>
+        </div>
+    </div>
+
+    <div class="overlay-container">
+        <span class="overlay-text" id="feature-name"></span><br>
+        <span class="overlay-text" id="feature-direccion"></span><br>
+    </div>
+    
+    <script src="./main.js"></script>
+    <script src="./libs/Ol/dist/ol.js"></script>
+</body>
+</html>
